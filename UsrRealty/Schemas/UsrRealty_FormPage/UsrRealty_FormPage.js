@@ -120,6 +120,29 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
+				"name": "Comission",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 4,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrColumn9_t6u0jko",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrColumn9_t6u0jko",
+					"visible": false,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": ""
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
 				"name": "RealtyType",
 				"values": {
 					"layoutConfig": {
@@ -310,6 +333,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"PDS_UsrNumber_ikrip2k": {
 						"modelConfig": {
 							"path": "PDS.UsrNumber"
+						}
+					},
+					"PDS_UsrColumn9_t6u0jko": {
+						"modelConfig": {
+							"path": "PDS.UsrColumn9"
 						}
 					}
 				}

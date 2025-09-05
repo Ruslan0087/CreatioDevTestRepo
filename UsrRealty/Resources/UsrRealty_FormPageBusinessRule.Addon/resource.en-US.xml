@@ -2,6 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="AddonConfig.Rules.2d5c0219-d3fb-8a08-12fe-41cbf858cb17.Caption" Value="Show elements: Comission, USD" />
 			<Item Name="AddonConfig.Rules.7951e064-67e6-e687-57bf-1c4f8e5d8080.Caption" Value="Show elements: Comment" />
 			<Item Name="Caption" Value="Realty form page (Business rules)" />
 		</Items>
