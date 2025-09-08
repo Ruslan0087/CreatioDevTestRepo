@@ -40,6 +40,15 @@
 - MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16
 - MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16
 - MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
++ MetaData.Schema.D2 {
+  "UId": "3252b957-0ad3-bac1-cb47-b049eca2cf17",
+  "A2": "UsrCommissionPercent",
+  "A3": "29c92be0-434a-4fbb-b6d8-1a0571979617",
+  "A4": "29c92be0-434a-4fbb-b6d8-1a0571979617",
+  "A5": "5a8edfea-944a-4884-928b-284d2e6e90e0",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","736c30a7-c0ec-4fa9-b034-2552b319b633","9e53fd7c-dde4-4502-a64c-b9e34148108b","3fabd836-6a53-4d8d-9069-6df88d9dae1e","3252b957-0ad3-bac1-cb47-b049eca2cf17"]
 = MetaData.Schema.D20.A2 "UsrRealtyOfferTypeEvents"
 = MetaData.Schema.D36.A3 "29c92be0-434a-4fbb-b6d8-1a0571979617"
 = MetaData.Schema.D36.BS1 false
