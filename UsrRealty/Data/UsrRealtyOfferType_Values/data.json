@@ -4,11 +4,35 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "f90add4a-d07e-4348-a535-3f7563364cd1"
+          "Value": "f25fde11-d0af-46ea-8f65-e7631daf5ebd"
+        },
+        {
+          "SchemaColumnUId": "3252b957-0ad3-bac1-cb47-b049eca2cf17",
+          "Value": 50.00
         },
         {
           "SchemaColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
-          "Value": "\/Date(1756915082002+0300)\/"
+          "Value": "\/Date(1757072910315+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1756915133134+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "f90add4a-d07e-4348-a535-3f7563364cd1"
+        },
+        {
+          "SchemaColumnUId": "3252b957-0ad3-bac1-cb47-b049eca2cf17",
+          "Value": 2.00
+        },
+        {
+          "SchemaColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
+          "Value": "\/Date(1757072897895+0300)\/"
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",

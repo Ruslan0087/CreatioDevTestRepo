@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "29c92be0-434a-4fbb-b6d8-1a0571979617",
     "Name": "UsrRealtyOfferType_Values",
-    "ModifiedOnUtc": "\/Date(1756915114000)\/",
+    "ModifiedOnUtc": "\/Date(1757073272000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "29c92be0-434a-4fbb-b6d8-1a0571979617",
@@ -17,18 +17,18 @@
         "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
       },
       {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
         "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
         "IsForceUpdate": false,
         "IsKey": false,
         "ColumnName": "Name",
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
-      },
-      {
-        "ColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-        "IsForceUpdate": false,
-        "IsKey": false,
-        "ColumnName": "CreatedOn",
-        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
       },
       {
         "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
@@ -38,11 +38,18 @@
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
       },
       {
-        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "ColumnUId": "3252b957-0ad3-bac1-cb47-b049eca2cf17",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "UsrCommissionPercent",
+        "DataTypeValueUId": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+      },
+      {
+        "ColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
         "IsForceUpdate": false,
-        "IsKey": true,
-        "ColumnName": "Id",
-        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+        "IsKey": false,
+        "ColumnName": "CreatedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
       }
     ]
   }
