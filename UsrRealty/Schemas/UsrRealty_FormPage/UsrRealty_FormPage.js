@@ -79,7 +79,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"clicked": {
 						"request": "crt.RunBusinessProcessRequest",
 						"params": {
-							"processName": "UsrCalcAverageRealtyPrice1",
+							"processName": "UsrCalcAverageRealtyPriceProcess",
 							"processRunType": "ForTheSelectedPage",
 							"saveAtProcessStart": false,
 							"showNotification": true,
@@ -146,9 +146,10 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrPrise_exx8ofj",
+					"label": "$Resources.Strings.PDS_UsrPrice_qri5d88",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrPrise_exx8ofj"
+					"control": "$PDS_UsrPrice_qri5d88",
+					"readonly": false
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -779,20 +780,6 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"path": "PDS.UsrName"
 						}
 					},
-					"PDS_UsrPrise_exx8ofj": {
-						"modelConfig": {
-							"path": "PDS.UsrPrise"
-						},
-						"validators": {
-							"MySuperValidator": {
-								"type": "usr.DGValidator",
-								"params": {
-									"minValue": 50,
-									"message": "#ResourceString(PriceCannotBeLess)#"
-								}
-							}
-						}
-					},
 					"PDS_UsrArea_oc1a2pw": {
 						"modelConfig": {
 							"path": "PDS.UsrArea"
@@ -895,6 +882,20 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 								}
 							}
 						}
+					},
+					"PDS_UsrPrice_qri5d88": {
+						"modelConfig": {
+							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 50,
+									"message": "#ResourceString(PriceCannotBeLess)#"
+								}
+							}
+						}
 					}
 				}
 			},
@@ -979,7 +980,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				handler: async (request, next) => {
 					console.log("Button works...");
 					Terrasoft.showInformation("My button was pressed.");
-					var price = await request.$context.PDS_UsrPrise_exx8ofj;
+					var price = await request.$context.PDS_UsrPrice_qri5d88;
 					console.log("Price = " + price);
 					request.$context.PDS_UsrArea_oc1a2pw = 4000;
 					/* Call the next handler if it exists and return its result. */
@@ -990,9 +991,9 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				request: "crt.HandleViewModelAttributeChangeRequest",
 				/* The custom implementation of the system query handler. */
 				handler: async (request, next) => {
-      				if (request.attributeName === 'PDS_UsrPrise_exx8ofj' || 				             // if price changed
+      				if (request.attributeName === 'PDS_UsrPrice_qri5d88' || 				             // if price changed
 					   request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPercent_lpz0d4j' ) { 		// or percent changed
-						var price = await request.$context.PDS_UsrPrise_exx8ofj;
+						var price = await request.$context.PDS_UsrPrice_qri5d88;
 						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercent_lpz0d4j;
 						var commission = price * percent / 100;
 						request.$context.PDS_UsrCommission_p2jji7z = commission;

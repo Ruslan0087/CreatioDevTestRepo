@@ -735,6 +735,42 @@
             "GS2": "false",
             "GS5": "ac2ef13c-30dd-4023-9c04-58f580743b48"
           }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "2c6118fc-ee70-4bca-9bf7-16524475ac25",
+          "A2": "PreconfiguredPageUserTask1",
+          "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "GT2": "[Element:{6832cb52-fbb2-4598-8a8f-b141497f17b1}].[Parameter:{6556baff-64f7-4ba6-b9dc-65117fac502c}]",
+          "GT3": "6556baff-64f7-4ba6-b9dc-65117fac502c",
+          "GT5": "fb0d6fd1-17a1-4a04-a155-a4b643c6d048",
+          "GT4": "ac2ef13c-30dd-4023-9c04-58f580743b48",
+          "GT1": {}
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "be67f060-f186-452b-b05e-dfa451c1039d",
+          "A2": "PreconfiguredPageUserTask1",
+          "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "GT2": "[Element:{6832cb52-fbb2-4598-8a8f-b141497f17b1}].[Parameter:{0e5a5d20-ecd0-4f55-8b3f-7875e62e0887}]",
+          "GT3": "0e5a5d20-ecd0-4f55-8b3f-7875e62e0887",
+          "GT5": "e4eae837-3880-4fb6-b3d9-1e07e1412230",
+          "GT4": "ac2ef13c-30dd-4023-9c04-58f580743b48",
+          "GT1": {}
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "2069a1a8-fc34-46a5-aaa1-ed6719171e46",
+          "A2": "PreconfiguredPageUserTask1",
+          "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+          "GT2": "[Element:{6832cb52-fbb2-4598-8a8f-b141497f17b1}].[Parameter:{6372d97f-83dc-47bb-b7d6-ffd92363c0e5}]",
+          "GT3": "6372d97f-83dc-47bb-b7d6-ffd92363c0e5",
+          "GT5": "bfaa9c7f-c368-4402-8310-a17660faf148",
+          "GT4": "ac2ef13c-30dd-4023-9c04-58f580743b48",
+          "GT1": {}
         }
       ],
       "BK37": {
@@ -829,7 +865,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, \"UsrRealty\");\r\nvar priceColumn = esq.AddColumn(\"UsrPrise\");  // SELECT UsrPrice as UsrPrice, UsrArea as UsrArea FROM UsrRealty WHERE ...\r\nvar areaColumn = esq.AddColumn(\"UsrArea\");\r\n\r\nGuid typeId = Get<Guid>(\"RealtyTypeIdParameter\");\r\nGuid offerTypeId = Get<Guid>(\"RealtyOfferTypeIdParameter\");\r\n\r\nvar typeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"UsrType\", typeId);\r\nesq.Filters.Add(typeFilter);\r\n\r\nvar offerTypeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"UsrOfferType\", offerTypeId);\r\nesq.Filters.Add(offerTypeFilter); // ... WHERE UsrTypeId = :typeId AND UsrOfferTypeId = :offerTypeId\r\n\r\nstring sqlText = esq.GetSelectQuery(UserConnection).GetSqlText();\r\nSet(\"SqlTextParameter\", sqlText);\r\n\r\nvar entityCollection = esq.GetEntityCollection(UserConnection);\r\ndecimal totalUSD = 0;\r\ndecimal totalArea = 0;\r\nforeach(var entity in entityCollection) {\r\n\tdecimal price = entity.GetTypedColumnValue<decimal>(priceColumn.Name); // reading using column alias\r\n\tdecimal area = entity.GetTypedColumnValue<decimal>(areaColumn.Name); // reading using column alias\r\n\ttotalUSD = totalUSD + price;\r\n\ttotalArea = totalArea + area;\r\n}\r\n\r\ndecimal result = 0;\r\nif (totalArea > 0) {\r\n\tresult = totalUSD / totalArea;\r\n}\r\n\r\nSet(\"AvgPriceUSDParameter\", result);\r\n\r\nreturn true;",
+          "CH1": "var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, \"UsrRealty\");\r\nvar priceColumn = esq.AddColumn(\"UsrPrice\");  // SELECT UsrPrice as UsrPrice, UsrArea as UsrArea FROM UsrRealty WHERE ...\r\nvar areaColumn = esq.AddColumn(\"UsrArea\");\r\n\r\nGuid typeId = Get<Guid>(\"RealtyTypeIdParameter\");\r\nGuid offerTypeId = Get<Guid>(\"RealtyOfferTypeIdParameter\");\r\n\r\nvar typeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"UsrType\", typeId);\r\nesq.Filters.Add(typeFilter);\r\n\r\nvar offerTypeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"UsrOfferType\", offerTypeId);\r\nesq.Filters.Add(offerTypeFilter); // ... WHERE UsrTypeId = :typeId AND UsrOfferTypeId = :offerTypeId\r\n\r\nstring sqlText = esq.GetSelectQuery(UserConnection).GetSqlText();\r\nSet(\"SqlTextParameter\", sqlText);\r\n\r\nvar entityCollection = esq.GetEntityCollection(UserConnection);\r\ndecimal totalUSD = 0;\r\ndecimal totalArea = 0;\r\nforeach(var entity in entityCollection) {\r\n\tdecimal price = entity.GetTypedColumnValue<decimal>(priceColumn.Name); // reading using column alias\r\n\tdecimal area = entity.GetTypedColumnValue<decimal>(areaColumn.Name); // reading using column alias\r\n\ttotalUSD = totalUSD + price;\r\n\ttotalArea = totalArea + area;\r\n}\r\n\r\ndecimal result = 0;\r\nif (totalArea > 0) {\r\n\tresult = totalUSD / totalArea;\r\n}\r\n\r\nSet(\"AvgPriceUSDParameter\", result);\r\n\r\nreturn true;",
           "CH2": true
         },
         {
@@ -1551,6 +1587,42 @@
               "L8": {},
               "L9": "84f44b9a-4bc3-4cbf-a1a8-cec02c1c029c",
               "L16": "SysAdminUnit"
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "6556baff-64f7-4ba6-b9dc-65117fac502c",
+              "A2": "Account",
+              "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "IL2": "6832cb52-fbb2-4598-8a8f-b141497f17b1",
+              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+              "L8": {},
+              "L9": "25d7c1ab-1de0-4501-b402-02e0e5a72d6e",
+              "L17": "ActivityConnection"
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "0e5a5d20-ecd0-4f55-8b3f-7875e62e0887",
+              "A2": "OmniChat",
+              "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "IL2": "6832cb52-fbb2-4598-8a8f-b141497f17b1",
+              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+              "L8": {},
+              "L9": "af1f685c-315b-4b44-a957-c5094417a57a",
+              "L17": "ActivityConnection"
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "6372d97f-83dc-47bb-b7d6-ffd92363c0e5",
+              "A2": "Contact",
+              "A3": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "A4": "08ebea90-dfbe-4161-8f3a-eafbaa56aa1a",
+              "IL2": "6832cb52-fbb2-4598-8a8f-b141497f17b1",
+              "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+              "L8": {},
+              "L9": "16be3651-8fe2-4159-8dd0-a803d4683dd3",
+              "L17": "ActivityConnection"
             }
           ],
           "CL2": "FFFFFFFF",

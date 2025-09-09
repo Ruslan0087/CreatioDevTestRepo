@@ -30,7 +30,7 @@
 
 		private bool ScriptTask1Execute(ProcessExecutingContext context) {
 			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "UsrRealty");
-			var priceColumn = esq.AddColumn("UsrPrise");  // SELECT UsrPrice as UsrPrice, UsrArea as UsrArea FROM UsrRealty WHERE ...
+			var priceColumn = esq.AddColumn("UsrPrice");  // SELECT UsrPrice as UsrPrice, UsrArea as UsrArea FROM UsrRealty WHERE ...
 			var areaColumn = esq.AddColumn("UsrArea");
 			
 			Guid typeId = Get<Guid>("RealtyTypeIdParameter");
