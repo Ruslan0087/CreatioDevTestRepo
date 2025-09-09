@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
+			<Item Name="LocalizableStrings.ActionsButton_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.addRecord_lq5w02p_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_uzysku5_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_vmvi37y_caption.Value" Value="Add new" />
@@ -18,6 +19,7 @@
 			<Item Name="LocalizableStrings.NumberInput_g34dzit_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50.0" />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push me!" />
+			<Item Name="LocalizableStrings.RunCalcAvgPriceProcessMenuItem_caption.Value" Value="Start calc avg realty price process" />
 		</Items>
 	</Group>
 </Resources>
