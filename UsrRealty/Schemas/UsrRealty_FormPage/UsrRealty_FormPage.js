@@ -113,7 +113,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 				"values": {
 					"type": "crt.Button",
 					"caption": "#ResourceString(PushMeButton_caption)#",
-					"color": "accent",
+					"color": "primary",
 					"disabled": false,
 					"size": "medium",
 					"iconPosition": "left-icon",
