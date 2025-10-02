@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Game edit page" />
+			<Item Name="LocalizableStrings.addRecord_1884ztb_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_7qnwf8j_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_g7ice2d_caption.Value" Value="Add new" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "f8ae9881-ef38-4fe1-bb27-dd9648845848",
+    "Name": "UsrGame",
+    "ModifiedOnUtc": "\/Date(1759331405000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Game",
+    "DependsOn": []
+  }
+}

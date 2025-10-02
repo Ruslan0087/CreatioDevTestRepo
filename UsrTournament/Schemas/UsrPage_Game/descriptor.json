@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "c5b3dd19-006f-47ba-90d8-36c4d2ce2a9f",
+    "Name": "UsrPage_Game",
+    "ModifiedOnUtc": "\/Date(1759331365000)\/",
+    "Parent": {
+      "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
+      "Name": "BaseMiniPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Game edit page"
+  }
+}

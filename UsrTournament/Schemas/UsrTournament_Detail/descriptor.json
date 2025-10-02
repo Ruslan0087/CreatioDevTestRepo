@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "1fc05595-1b1c-4f5f-89f7-dd76d8076ca0",
+    "Name": "UsrTournament_Detail",
+    "ModifiedOnUtc": "\/Date(1759304836000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Tournament detail",
+    "DependsOn": []
+  }
+}

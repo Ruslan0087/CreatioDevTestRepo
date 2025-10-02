@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "6356d2d5-b752-4f56-a33a-c004e6b9cc20",
+    "Name": "UsrGameRelatedPage",
+    "ModifiedOnUtc": "\/Date(1759331405000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Game (Page settings)",
+    "DependsOn": []
+  }
+}

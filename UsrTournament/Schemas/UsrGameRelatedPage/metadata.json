@@ -1,0 +1,35 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "6356d2d5-b752-4f56-a33a-c004e6b9cc20",
+      "A2": "UsrGameRelatedPage",
+      "A5": "a27def7f-5164-4def-80c1-6dad6a989a11",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "f695da6a-debd-4438-bd0a-027c5a1ea405",
+      "B8": "8.3.0.3074",
+      "AD1": "f8ae9881-ef38-4fe1-bb27-dd9648845848",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+  "Pages": [
+    {
+      "UId": "7ddcff21-cfed-1396-3850-c1163e90c699",
+      "PageSchemaUId": "c5b3dd19-006f-47ba-90d8-36c4d2ce2a9f",
+      "IsDefault": true,
+      "IsSspDefault": false,
+      "Actions": {
+        "Add": false
+      },
+      "Role": "a29a3ba5-4b0d-de11-9a51-005056c00008",
+      "TypeColumnValue": null
+    }
+  ],
+  "TypeColumnUId": null
+}
+    }
+  }
+}

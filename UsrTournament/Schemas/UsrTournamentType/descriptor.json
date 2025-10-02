@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "56eb5d54-1afd-4978-ad03-41748906b81e",
+    "Name": "UsrTournamentType",
+    "ModifiedOnUtc": "\/Date(1759311127000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Tournament type",
+    "DependsOn": []
+  }
+}
