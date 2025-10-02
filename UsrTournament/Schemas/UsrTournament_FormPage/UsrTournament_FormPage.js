@@ -1,4 +1,4 @@
-define("UsrTournament_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrTournament_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -473,9 +473,9 @@ define("UsrTournament_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 							}
 						},
 						"editable": {
-							"enable": false,
+							"enable": true,
 							"itemsCreation": false,
-							"floatingEditPanel": false
+							"floatingEditPanel": true
 						}
 					},
 					"items": "$GridDetail_dw3qltl",
@@ -522,7 +522,9 @@ define("UsrTournament_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 						}
 					],
 					"placeholder": false,
-					"bulkActions": []
+					"bulkActions": [],
+					"visible": true,
+					"fitContent": true
 				},
 				"parentName": "GridContainer_z2zlcgs",
 				"propertyName": "items",
@@ -772,7 +774,59 @@ define("UsrTournament_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+			 {
+
+					request:"crt.SaveRecordRequest",
+					handler: async (request, next) => {
+
+					   const sysSettingsService = new sdk.SysSettingsService();
+					   const mySetting = await sysSettingsService.getByCode("MaximumNumberOfRegionalTournaments");
+					   var setting = mySetting.value;
+			
+					   var tournament_type = await request.$context.PDS_UsrTournamentType_jv4jhg4;
+					   var is_active = await request.$context.PDS_UsrActive_5d2lthv;
+					   var record_id = await request.$context.Id;
+
+					   console.log(is_active);
+					   console.log(tournament_type.displayValue);
+
+					   var regionalTypeId = "59bf10d0-7336-4b53-8d79-5f776ead8108";	
+					   if (is_active == true && tournament_type?.value === regionalTypeId) {
+							  const filters = new sdk.FilterGroup();
+							  await filters.addSchemaColumnFilterWithParameter(sdk.ComparisonType.Equal, "UsrTournamentType", regionalTypeId);
+							  await filters.addSchemaColumnFilterWithParameter(sdk.ComparisonType.Equal, "UsrActive", true);
+							  const accountModel = await sdk.Model.create("UsrTournament");
+			
+							  const partners = await accountModel.load({
+								  attributes: ["Id"],
+								  parameters: [{
+												 type: sdk.ModelParameterType.Filter,
+												 value: filters
+												}]
+								  });
+	
+							console.log(partners);
+	
+						   var total = 0;
+						   for (const r of partners) {
+							  if (r.Id === record_id) continue;
+							  total += 1;
+						   }
+	
+						   total += 1;
+						   console.log(total);
+	
+						   if (total > setting) {
+							  Terrasoft.showInformation(`No more than ${setting} regional tournaments can be active at a time.`);
+							  return;
+						   }
+						}
+
+						return next?.handle(request);
+					}
+			 }
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
 	};

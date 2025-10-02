@@ -12,6 +12,7 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_myysmwx_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_zvq7tft_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_w8xe23d_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.NoMoreThanNRegionalTournaments.Value" Value="No more than 3 regional tournaments can be active at a time" />
 		</Items>
 	</Group>
 </Resources>
