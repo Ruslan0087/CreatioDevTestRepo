@@ -71,6 +71,33 @@ define("UsrTournament_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 			},
 			{
 				"operation": "insert",
+				"name": "AddGamesButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(AddGamesButton_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrAutomaticAddingGameRecordsProcess",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "TournamentIdParameter"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "UsrName",
 				"values": {
 					"layoutConfig": {
@@ -463,7 +490,7 @@ define("UsrTournament_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 						"colSpan": 2,
 						"column": 1,
 						"row": 1,
-						"rowSpan": 6
+						"rowSpan": 11
 					},
 					"features": {
 						"rows": {

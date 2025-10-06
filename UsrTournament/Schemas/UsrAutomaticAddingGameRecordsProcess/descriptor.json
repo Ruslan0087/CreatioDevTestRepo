@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "9e456268-94b3-4d55-ac6b-d3b8798ee075",
+    "Name": "UsrAutomaticAddingGameRecordsProcess",
+    "ModifiedOnUtc": "\/Date(1759763226000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Automatic adding game records process",
+    "DependsOn": []
+  }
+}

@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Tournament form page" />
+			<Item Name="LocalizableStrings.AddGamesButton_caption.Value" Value="Add games" />
 			<Item Name="LocalizableStrings.addRecord_fnuvpi1_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_w6o52zs_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.ExpansionPanel_awdtywg_title.Value" Value="Game" />
