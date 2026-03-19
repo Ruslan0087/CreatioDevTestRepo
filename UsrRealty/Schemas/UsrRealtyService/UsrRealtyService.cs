@@ -21,14 +21,16 @@ namespace Terrasoft.Configuration
             {
                 return -1;
             }
-            Select select = new Select(UserConnection)
+
+			Select select = new Select(UserConnection)
                 .Column(Func.Max("UsrPrice"))
                 .From("UsrRealty")
                 .Where("UsrTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
                 .And("UsrOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId)))
                 as Select;
+
             decimal result = select.ExecuteScalar<decimal>();
-            return result;
+            return result < 0 ? 0 : result;
         }
 
         [OperationContract]
